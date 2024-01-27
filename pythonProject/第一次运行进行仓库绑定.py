@@ -29,17 +29,16 @@ def git_run_command(command):
     if command == ["git", "commit", "--m"]:
         command.append(input("提交信息（回车为无）: "))
     process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    print("Git Command Output:\n", process.communicate().decode())
+    output = process.communicate()
+    print("Git Command Output:\n", output)
 
 
 
 def ini_git(command_name, command_email, command_store, command_list, command_clone):
     command_name.append('"' + input("输入您的用户名（英文）：") + '"')
     command_email.append(input("输入您的邮箱（完整）："))
-    process1 = subprocess.Popen(command_name, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    process2 = subprocess.Popen(command_email, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    print("Git Command Output:\n", process1.communicate().decode())
-    print("Git Command Output:\n", process2.communicate().decode())
+    git_run_command(command_name)
+    git_run_command(command_email)
     git_run_command(command_store)
     git_run_command(command_list)
     git_run_command(command_clone)

@@ -1,5 +1,5 @@
 import subprocess
-
+"""目前遗留问题，输出信息乱码，格式不规范"""
 # 定义要执行的git命令，例如查看当前的git状态
 command_status = ["git", "status"]
 # 将所有.py为后缀的文件提交至缓存区
@@ -29,7 +29,7 @@ def git_run_command(command):
     if command == ["git", "commit", "--m"]:
         command.append(input("提交信息（回车为无）: "))
     process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    print("Git Command Output:\n", process.communicate().decode())
+    print("Git Command Output:\n", process.communicate())
 
 
 

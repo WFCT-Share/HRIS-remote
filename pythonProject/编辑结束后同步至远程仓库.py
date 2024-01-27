@@ -17,7 +17,8 @@ def git_run_command(command):
     if command == ["git", "commit", "--m"]:
         command.append(input("提交信息（回车为无）: "))
     process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    print("Git Command Output:\n", process.communicate())
+    output = process.communicate()
+    print("Git Command Output:\n", output)
 
 
 git_run_command(command_add_all)
