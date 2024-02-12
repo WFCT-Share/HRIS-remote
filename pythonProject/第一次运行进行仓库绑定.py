@@ -45,3 +45,5 @@ def ini_git(command_name, command_email, command_store, command_list, command_cl
 
 
 ini_git(command_name, command_email,command_store, command_list, command_clone)
+git_run_command(command_pull)
+print("同步完成")
