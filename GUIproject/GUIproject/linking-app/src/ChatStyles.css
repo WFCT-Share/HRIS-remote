@@ -1,0 +1,11 @@
+/* 聊天框样式 */
+.chat-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc; /* 可选，增加边框视觉效果 */
+    resize: both; /* 允许改变大小 */
+    overflow: auto; /* 确保内容可以滚动 */
+  }
+  

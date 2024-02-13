@@ -4,7 +4,7 @@ import subprocess
 command_status = ["git", "status"]
 # 将所有.py为后缀的文件提交至缓存区
 command_add_py = ["git", "add", "*.py"]
-#将当前目录下所有的文件提交至缓存区
+# 将当前目录下所有的文件提交至缓存区
 command_add_all = ["git", "add", "."]
 # 将所有修改过的文件进行提交，并上传提交信息
 command_commit = ["git", "commit", "--m"]
