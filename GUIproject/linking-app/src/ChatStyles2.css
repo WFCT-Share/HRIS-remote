@@ -1,0 +1,57 @@
+/* 拖动手柄样式 */
+/* 聊天框样式 */
+.chat-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc; /* 可选，增加边框视觉效果 */
+    resize: both; /* 允许改变大小 */
+    overflow: auto; /* 确保内容可以滚动 */
+  }
+.resize-handle {
+    position: absolute;
+    background: #ccc;
+    cursor: nwse-resize; /* 光标样式 */
+  }
+  
+  .resize-handle-nw,
+  .resize-handle-sw {
+    width: 10px;
+    height: 10px;
+    cursor: nwse-resize; /* 左上和左下角 */
+  }
+  
+  .resize-handle-ne,
+  .resize-handle-se {
+    width: 10px;
+    height: 10px;
+    cursor: nesw-resize; /* 右上和右下角 */
+  }
+  
+  .resize-handle-n,
+  .resize-handle-s {
+    height: 10px;
+    left: 0;
+    right: 0;
+    cursor: ns-resize; /* 顶部和底部边缘 */
+  }
+  
+  .resize-handle-e,
+  .resize-handle-w {
+    width: 10px;
+    top: 0;
+    bottom: 0;
+    cursor: ew-resize; /* 右侧和左侧边缘 */
+  }
+  
+  .resize-handle-n { top: 0; }
+  .resize-handle-s { bottom: 0; }
+  .resize-handle-e { right: 0; }
+  .resize-handle-w { left: 0; }
+  
+  .resize-handle-nw { top: 0; left: 0; }
+  .resize-handle-ne { top: 0; right: 0; }
+  .resize-handle-sw { bottom: 0; left: 0; }
+  .resize-handle-se { bottom: 0; right: 0; }
+  
